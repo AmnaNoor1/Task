@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Loader</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .loader-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #191919;
+      }
+
+      .loader {
+        position: relative;
+        width: 150px;
+        height: 150px;
+      }
+
+      svg {
+        display: block;
+        margin: auto;
+        transform: rotate(180deg);
+      }
+
+      .circle {
+        fill: none;
+        stroke-width: 11;
+        stroke-linecap: square;
+      }
+
+      .loader-text {
+        color: #8e8e8e;
+        font-size: 32px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-container">
+      <div class="loader">
+        <svg width="150" height="150">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color: #e0040b; stop-opacity: 1" />
+              <stop offset="65%" style="stop-color: #dd1e4b; stop-opacity: 1" />
+            </linearGradient>
+          </defs>
+          <circle
+            class="circle"
+            cx="75"
+            cy="75"
+            r="60"
+            stroke-dasharray="377"
+            stroke-dashoffset="377"
+            stroke="url(#gradient)"
+          ></circle>
+        </svg>
+        <div class="loader-text" id="loaderText">0%</div>
+      </div>
+    </div>
+    <script>
+      let percentage = 0;
+      const loaderText = document.getElementById("loaderText");
+      const circle = document.querySelector(".circle");
+
+      function updateLoader() {
+        if (percentage <= 100) {
+          loaderText.textContent = percentage + "%";
+          const offset = 377 - (377 * percentage) / 100;
+          circle.style.strokeDashoffset = offset;
+          percentage++;
+        } else {
+          clearInterval(interval);
+        }
+      }
+
+      const interval = setInterval(updateLoader, 30); // Update every 50 milliseconds
+    </script>
+  </body>
+</html>
