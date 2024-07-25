@@ -1,6 +1,9 @@
 .mid {
   background-color: #191919;
   padding: 130px 0;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
 }
 .mid p {
   color: #dd1e4b;
@@ -73,7 +76,7 @@
   transition: width 0.1s ease 0s;
 }
 
-.line {
+/* .line {
   content: "";
   position: absolute;
   z-index: 2;
@@ -89,6 +92,54 @@
   content: "";
   position: absolute;
   z-index: 2;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 100px;
+  background-image: linear-gradient(45deg, #dd1e4b 15%, #e0040b 65%);
+} */
+
+.main-section::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -50px;
+  left: 50%;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 100px;
+  background-image: linear-gradient(45deg, #dd1e4b 15%, #e0040b 65%);
+}
+
+.mid::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -50px;
+  left: 50%;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 100px;
+  background-image: linear-gradient(45deg, #dd1e4b 15%, #e0040b 65%);
+}
+
+.mid::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -50px;
+  left: 50%;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 100px;
+  background-image: linear-gradient(45deg, #dd1e4b 15%, #e0040b 65%);
+}
+
+.end::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -50px;
+  left: 50%;
   left: calc(50% - 2.5px);
   width: 5px;
   height: 100px;

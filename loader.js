@@ -4,7 +4,7 @@ const circle = document.querySelector(".circle");
 
 function updateLoader() {
   if (percentage <= 100) {
-    document.getElementById("main-content").style.display = "none";
+    document.getElementById("body").style.display = "none";
     loaderText.textContent = percentage + "%";
     const offset = 377 - (377 * percentage) / 100;
     circle.style.strokeDashoffset = offset;
@@ -12,7 +12,7 @@ function updateLoader() {
   } else {
     clearInterval(interval);
     document.querySelector(".loader-container").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
+    document.getElementById("body").style.display = "block";
   }
 }
 

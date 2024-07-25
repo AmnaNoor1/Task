@@ -10,11 +10,11 @@
 
 .inner {
   position: absolute;
-  top: 47%;
+  top: 32%;
   left: 50%;
   width: 100%;
   max-width: 1040px;
-  height: 100%;
+  height: 70%;
   object-fit: cover;
   transform: translate(-50%, -25%);
   z-index: 1;
@@ -34,11 +34,11 @@ canvas {
   padding: 35px;
 }
 
-.title {
+.end .title {
   font-size: 4rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
-  font-size: 64px;
+  font-size: 5rem;
   font-weight: 900;
   line-height: 1.2;
   font-family: default;
@@ -63,16 +63,16 @@ canvas {
 .dark-button:active {
   position: relative;
   padding: 10px 25px;
-  background-color: transparent; /* Make background transparent to show border */
-  border: 3px solid transparent; /* Adjust border width */
+  background-color: transparent;
+  border: 3px solid transparent;
   border-image: linear-gradient(45deg, #e0040b, #dd1e4b 65%);
   border-image-slice: 1;
   border-radius: 0;
   color: white;
   font-weight: 400;
-  text-align: center; /* Center text for alignment */
-  display: inline-block; /* Ensure the button is inline-block */
-  text-decoration: none; /* Remove underline */
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .dark-button:hover {
