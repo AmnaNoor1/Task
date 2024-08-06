@@ -1,50 +1,25 @@
-.preview-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #2b2b2b; /* Adjust the background color as needed */
-  padding: 10px 15px;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-}
-
-.preview-header a {
-  text-decoration: none;
-}
-
-.header-envato_market {
-  height: 18px;
-  width: 152px;
-  background: url("/assets/envato.svg") no-repeat center center;
-  background-size: contain;
-}
-
-.header-buy-now {
-  box-shadow: 0 2px 0 #6f9a37;
-  background-color: #8cc63f; /* Adjust the color as needed */
-  color: white;
-  font-size: 14px;
-  padding: 5px 20px;
-  line-height: 1.5;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-}
 .navbar {
   color: #fff;
   position: fixed;
-  top: 70px;
-  left: 9%;
+  top: 10px;
   z-index: 1;
-  width: 80%;
+  width: 100%;
   padding: 5px 8px;
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+}
+
+.custom-btn {
+  margin-right: 17px;
+}
 .button-text-icon {
   display: flex;
   flex-direction: row;
@@ -61,11 +36,15 @@
   .button-text {
     display: none;
   }
+
+  .custom-btn {
+    padding: 10px 15px !important;
+  }
 }
 
 .navbar .navbar-brand {
   padding: 0;
-  margin: 0px 10px;
+  margin-left: 15px;
   font-size: 24px;
   font-weight: 600;
   padding: 0;
@@ -181,5 +160,17 @@
   .inner {
     justify-content: center;
     align-content: center;
+  }
+}
+
+@media (max-width: 891px) {
+  .main-content .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 691px) {
+  .main-content .title {
+    font-size: 3rem;
   }
 }

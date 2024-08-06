@@ -85,3 +85,9 @@ canvas {
     flex-direction: column;
   }
 }
+
+@media (max-width: 891px) {
+  .end .title {
+    font-size: 3.5rem;
+  }
+}
